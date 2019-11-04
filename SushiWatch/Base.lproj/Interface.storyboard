@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SushiWatch" customModuleProvider="target">
+                    <items>
+                        <label width="134" height="36" alignment="center" text="SushiWatch" textAlignment="center" numberOfLines="2" id="bx4-yG-YDh">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer numberOfTapsRequired="2" id="Q7n-7P-Axc">
+                                    <connections>
+                                        <action selector="gesturePause:" destination="AgC-eL-Hgc" id="6aF-Ng-io6"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                                <tapGestureRecognizer id="4gf-EB-OBL"/>
+                            </gestureRecognizers>
+                        </label>
+                        <group width="1" height="35" alignment="left" id="dfe-Ut-v05">
+                            <items>
+                                <button width="0.40000000000000002" height="1" alignment="left" backgroundImage="left" id="ss3-i8-6Jh">
+                                    <connections>
+                                        <action selector="btnLeftClick" destination="AgC-eL-Hgc" id="vhU-bt-Kpz"/>
+                                    </connections>
+                                </button>
+                                <button width="0.40000000000000002" height="1" alignment="right" backgroundImage="right" id="lFS-iO-vKm">
+                                    <connections>
+                                        <action selector="btnRightClick" destination="AgC-eL-Hgc" id="ob0-yX-rG0"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label height="17" alignment="center" textAlignment="center" id="Tut-E1-Cyu">
+                            <color key="textColor" red="0.88235294119999996" green="0.023529411760000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <button width="1" alignment="left" hidden="YES" title="More time?" id="P8P-Qz-hs3">
+                            <connections>
+                                <action selector="btnMoreTime" destination="AgC-eL-Hgc" id="lF2-CF-jxo"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnMoreTimeOutlet" destination="P8P-Qz-hs3" id="VAu-JJ-aET"/>
+                        <outlet property="btnMoveRight" destination="lFS-iO-vKm" id="84N-8v-Y8X"/>
+                        <outlet property="btnMoveleft" destination="ss3-i8-6Jh" id="046-XU-Qtm"/>
+                        <outlet property="lblGameState" destination="bx4-yG-YDh" id="vKO-mH-Ai7"/>
+                        <outlet property="lblTimeRemaining" destination="Tut-E1-Cyu" id="cSu-9d-mbR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="159" y="146"/>
+        </scene>
+    </scenes>
+</document>
